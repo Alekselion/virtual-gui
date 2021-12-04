@@ -4,7 +4,7 @@
   <img src="https://github.com/Alekselion/virtual-gui/blob/master/illustrations/elements.jpg" alt="gui">
 </p>
 
-Creating of virtual elements of the graphical interface using [opencv](https://pypi.org/project/opencv-python/) and [mediapipe](https://mediapipe.dev/).
+Creating virtual GUI elements using [opencv](https://pypi.org/project/opencv-python/) and [mediapipe](https://mediapipe.dev/).
 
 Element GUI | Output | Description
 ------------|--------|------------
