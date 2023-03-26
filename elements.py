@@ -430,29 +430,6 @@ if __name__ == '__main__':
             landmarks = utils.hands_detection(image)
             index_finger_tip = landmarks[8]
 
-            # # color finger
-            # cv2.circle(image, (index_finger_tip), 13, (204, 229, 242), -1)
-            #
-            # # blur face
-            # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-            # face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-            # faces = face_cascade.detectMultiScale(gray, scaleFactor=3, minNeighbors=5, minSize=(10, 10))
-            # for (x, y, w, h) in faces:
-            #     # find area of face
-            #     face = image[y:y + h, x:x + w]
-            #     height, width = face.shape[:2]
-            #     dw = int(width // 3)
-            #     dh = int(height // 3)
-            #
-            #     if dw % 2 == 0:
-            #         dw -= 1
-            #
-            #     if dh % 2 == 0:
-            #         dh -= 1
-            #
-            #     # make blur
-            #     image[y:y + h, x:x + w] = cv2.GaussianBlur(face, (dw, dh), 0)
-
             # draw / action the elements
             for obj in objs:
                 obj.action(index_finger_tip)
@@ -464,6 +441,8 @@ if __name__ == '__main__':
             if switch_debug.cursor_is_active:
                 utils.draw_finger(image, index_finger_tip)
                 # utils.draw_hands(image, landmarks)
+                # # color finger
+                # cv2.circle(image, (index_finger_tip), 13, (204, 229, 242), -1)
 
             # reset
             switch_reset.action(index_finger_tip)
